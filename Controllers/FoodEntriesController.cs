@@ -1,4 +1,6 @@
-﻿using CalorieTracker.Services;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using CalorieTracker.Services;
 using CalorieTracker.Models;
 using CalorieTracker.DTOs;
 
@@ -6,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CalorieTracker.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class FoodEntriesController : ControllerBase
